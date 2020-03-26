@@ -180,7 +180,7 @@ public class Main {
     private static <U> Deque<U> gettingQueueLIFO(Collection<U> collections) {
         Deque<U> result = new ArrayDeque<U>();
         for (U collection : collections) {
-            result.add(collection);
+            result.push(collection);
         }
         return result;
     }
@@ -188,7 +188,7 @@ public class Main {
     // распечатываем очередь при помощи методов LIFO
     private static <U> void printQueueLIFO(Deque<U> result) {
         while (result.peek() != null) {
-            System.out.println(result.pollLast());
+            System.out.println(result.pop());
         }
     }
 }
